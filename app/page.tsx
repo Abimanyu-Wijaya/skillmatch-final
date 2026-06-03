@@ -436,7 +436,7 @@ function SectionHeader({
       <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-emerald-500">
         {eyebrow}
       </p>
-      <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-950 md:text-5xl">
+      <h2 className="text-balance break-words text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl md:text-5xl">
         {title}
       </h2>
       <p className="mt-5 text-pretty text-base leading-7 text-slate-600 md:text-lg">
@@ -508,11 +508,11 @@ function HRDashboardShowcase() {
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-emerald-300">
             HR Dashboard - Bu Rina
           </p>
-          <h3 className="mt-3 text-3xl font-semibold tracking-tight">
+          <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
             Startup Digital Yogyakarta
           </h3>
         </div>
-        <button className="mt-5 rounded-full bg-emerald-300 px-5 py-3 text-sm font-black text-slate-950 shadow-lg md:mt-0">
+        <button className="mt-5 min-h-11 rounded-full bg-emerald-300 px-5 py-3 text-sm font-black text-slate-950 shadow-lg md:mt-0">
           Shortlist Kandidat
         </button>
       </div>
@@ -701,7 +701,7 @@ export default function Home() {
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm font-semibold text-emerald-700 shadow-sm">
                 Match Your Skills, Unlock Your Career
               </div>
-              <h1 className="max-w-4xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-6xl sm:leading-[1.02] lg:text-7xl">
+              <h1 className="max-w-4xl text-balance break-words text-3xl font-semibold leading-[1.08] tracking-tight text-slate-950 min-[380px]:text-4xl sm:text-6xl sm:leading-[1.02] lg:text-7xl">
                 Temukan pekerjaan yang sesuai dengan skill tervalidasi.
               </h1>
               <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-slate-600 md:text-xl">
@@ -711,19 +711,19 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  className="rounded-full bg-emerald-300 px-6 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-emerald-300/30 transition hover:-translate-y-0.5 hover:bg-cyan-300"
+                  className="min-h-11 rounded-full bg-emerald-300 px-5 py-3.5 text-center text-sm font-black text-slate-950 shadow-xl shadow-emerald-300/30 transition hover:-translate-y-0.5 hover:bg-cyan-300 sm:px-6 sm:py-4"
                   href="#problem"
                 >
                   Start Presentation
                 </a>
                 <a
-                  className="rounded-full bg-slate-950 px-6 py-4 text-center text-sm font-bold text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-cyan-700"
+                  className="min-h-11 rounded-full bg-slate-950 px-5 py-3.5 text-center text-sm font-bold text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-cyan-700 sm:px-6 sm:py-4"
                   href="#prototype"
                 >
                   Lihat Prototype
                 </a>
                 <a
-                  className="rounded-full border border-slate-200 bg-white px-6 py-4 text-center text-sm font-bold text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300"
+                  className="min-h-11 rounded-full border border-slate-200 bg-white px-5 py-3.5 text-center text-sm font-bold text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 sm:px-6 sm:py-4"
                   href="#dashboard"
                 >
                   Lihat Dashboard HR
@@ -1081,7 +1081,7 @@ export default function Home() {
                 Feature comparison
               </p>
             </div>
-            <div className="overflow-x-auto">
+            <div className="horizontal-scroll overflow-x-auto">
               <table className="w-full min-w-[760px] border-collapse text-left md:min-w-[920px]">
                 <thead>
                   <tr className="border-b border-slate-200 text-xs font-black uppercase tracking-[0.16em] text-slate-500">
@@ -1131,7 +1131,7 @@ export default function Home() {
               <p className="text-sm font-black uppercase tracking-[0.22em] text-emerald-300">
                 Positioning Map
               </p>
-              <h3 className="mt-4 text-3xl font-semibold tracking-tight">
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
                 Skill-first, campus-first, dan lebih personal untuk early-career talent.
               </h3>
               <p className="mt-4 leading-7 text-slate-300">
@@ -1151,14 +1151,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-5">
+            <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-4 sm:min-h-[420px] sm:p-5">
               <div className="absolute inset-6 rounded-[1.5rem] border border-white/10 bg-[linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:25%_25%]" />
               <div className="absolute bottom-12 left-12 right-8 h-px bg-cyan-200/45" />
               <div className="absolute bottom-12 left-12 top-8 w-px bg-cyan-200/45" />
-              <span className="absolute bottom-5 left-10 max-w-28 text-[10px] font-black uppercase tracking-[0.18em] text-slate-400">
+              <span className="absolute bottom-5 left-8 max-w-24 text-[10px] font-black uppercase tracking-[0.14em] text-slate-400 sm:left-10 sm:max-w-28 sm:tracking-[0.18em]">
                 General Job Portal
               </span>
-              <span className="absolute bottom-5 right-5 max-w-32 text-right text-[10px] font-black uppercase tracking-[0.18em] text-emerald-200">
+              <span className="absolute bottom-5 right-4 max-w-28 text-right text-[10px] font-black uppercase tracking-[0.14em] text-emerald-200 sm:right-5 sm:max-w-32 sm:tracking-[0.18em]">
                 Skill-Based Recruitment
               </span>
               <span className="absolute left-4 top-8 max-w-28 text-[10px] font-black uppercase tracking-[0.18em] text-emerald-200">
@@ -1263,7 +1263,7 @@ export default function Home() {
                   >
                     {scopeIdx + 1}
                   </span>
-                  <h3 className="text-2xl font-semibold tracking-tight">
+                  <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
                     {scope.title}
                   </h3>
                 </div>
@@ -1471,7 +1471,7 @@ export default function Home() {
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-600">
                   Speaker Notes
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
                   Alur Presentasi 3 Menit
                 </h2>
               </div>
@@ -1501,14 +1501,14 @@ export default function Home() {
 
       <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="closing">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-[2rem] bg-slate-950 p-8 text-white shadow-2xl shadow-slate-950/20 md:p-12">
+          <div className="relative overflow-hidden rounded-[1.75rem] bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/20 sm:rounded-[2rem] sm:p-8 md:p-12">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.25),transparent_28%),radial-gradient(circle_at_78%_12%,rgba(52,211,153,0.22),transparent_24%)]" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-300">
                   13 Closing
                 </p>
-                <h2 className="mt-4 max-w-3xl text-balance text-3xl font-semibold tracking-tight md:text-5xl">
+                <h2 className="mt-4 max-w-3xl text-balance break-words text-2xl font-semibold tracking-tight sm:text-3xl md:text-5xl">
                   SkillMatch ID hadir untuk mengubah proses rekrutmen dari
                   sekadar melihat CV menjadi memahami kemampuan nyata kandidat.
                 </h2>
@@ -1519,19 +1519,19 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a
-                    className="rounded-full bg-emerald-300 px-6 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-cyan-300"
+                    className="min-h-11 rounded-full bg-emerald-300 px-5 py-3.5 text-center text-sm font-black text-slate-950 shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-cyan-300 sm:px-6 sm:py-4"
                     href="#prototype"
                   >
                     Lihat Prototype
                   </a>
                   <a
-                    className="rounded-full bg-white px-6 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-emerald-100"
+                    className="min-h-11 rounded-full bg-white px-5 py-3.5 text-center text-sm font-black text-slate-950 shadow-xl shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-emerald-100 sm:px-6 sm:py-4"
                     href="#dashboard"
                   >
                     Coba HR Dashboard
                   </a>
                   <a
-                    className="rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white/15"
+                    className="min-h-11 rounded-full border border-white/20 bg-white/10 px-5 py-3.5 text-center text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white/15 sm:px-6 sm:py-4"
                     href="mailto:hello@skillmatch.id"
                   >
                     Hubungi Tim SkillMatch ID
@@ -1539,7 +1539,7 @@ export default function Home() {
                 </div>
               </div>
               <a
-                className="inline-flex justify-center rounded-full bg-white px-7 py-4 text-sm font-bold text-slate-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-200"
+                className="inline-flex min-h-11 justify-center rounded-full bg-white px-6 py-3.5 text-sm font-bold text-slate-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-200 sm:px-7 sm:py-4"
                 href="#top"
               >
                 Kembali ke atas

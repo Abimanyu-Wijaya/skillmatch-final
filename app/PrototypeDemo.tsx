@@ -118,9 +118,9 @@ export default function PrototypeDemo() {
   };
 
   return (
-    <div className="w-full max-w-full overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white/80 p-3 shadow-[0_28px_90px_rgba(15,23,42,0.12)] backdrop-blur-xl sm:rounded-[2rem] sm:p-4 md:p-6">
-      <div className="grid min-w-0 gap-6 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-        <div className="mx-auto w-full max-w-[310px] sm:max-w-[330px]">
+    <div className="w-full max-w-full overflow-hidden rounded-none border-0 bg-transparent p-0 shadow-none sm:rounded-[2rem] sm:border sm:border-slate-200 sm:bg-white/80 sm:p-4 sm:shadow-[0_28px_90px_rgba(15,23,42,0.12)] sm:backdrop-blur-xl md:p-6">
+      <div className="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+        <div className="mx-auto w-full max-w-[300px] sm:max-w-[330px]">
           <div className="mb-4 flex min-h-11 items-center justify-between gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 shadow-sm sm:px-4">
             <span className="text-xs font-black uppercase tracking-[0.18em] text-cyan-700">
               Step {active + 1} of {demoScreens.length}
@@ -132,7 +132,7 @@ export default function PrototypeDemo() {
           <IPhoneFrame screen={screen} />
         </div>
 
-        <div>
+        <div className="min-w-0 rounded-[1.5rem] border border-slate-200 bg-white/85 p-4 shadow-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none">
           <div className="mb-5 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">
             Interactive product demo
           </div>
@@ -173,7 +173,7 @@ export default function PrototypeDemo() {
           <div className="horizontal-scroll -mx-1 mt-7 flex gap-2 overflow-x-auto scroll-smooth px-1 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 xl:grid-cols-3">
             {demoScreens.map((item, index) => (
               <button
-                className={`min-h-11 min-w-[8.75rem] shrink-0 rounded-2xl border px-4 py-3 text-left text-sm font-bold transition hover:-translate-y-0.5 sm:min-w-0 ${
+                className={`min-h-11 min-w-[8.75rem] shrink-0 whitespace-nowrap rounded-2xl border px-4 py-3 text-left text-sm font-bold transition hover:-translate-y-0.5 sm:min-w-0 sm:whitespace-normal ${
                   index === active
                     ? "border-slate-950 bg-slate-950 text-white shadow-lg shadow-slate-950/15"
                     : "border-slate-200 bg-white text-slate-700 hover:border-cyan-200"
@@ -198,16 +198,18 @@ export default function PrototypeDemo() {
 function IPhoneFrame({ screen }: { screen: (typeof demoScreens)[number] }) {
   return (
     <div className="w-full max-w-full rounded-[2rem] border-[7px] border-slate-950 bg-slate-950 p-1.5 shadow-[0_40px_100px_rgba(2,6,23,0.35)] sm:rounded-[2.5rem] sm:border-[9px] sm:p-2">
-      <div className="relative min-h-[560px] overflow-hidden rounded-[1.6rem] bg-slate-50 sm:min-h-[640px] sm:rounded-[2rem]">
+      <div className="relative aspect-[9/16] h-auto overflow-hidden rounded-[1.6rem] bg-slate-50 sm:aspect-[9/17] sm:rounded-[2rem]">
         <div className="absolute left-1/2 top-2 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-slate-950 sm:h-7 sm:w-32" />
-        <div className="flex min-h-[560px] flex-col bg-[linear-gradient(145deg,#f8fafc_0%,#ecfeff_46%,#f0fdf4_100%)] sm:min-h-[640px]">
+        <div className="flex h-full min-h-0 flex-col bg-[linear-gradient(145deg,#f8fafc_0%,#ecfeff_46%,#f0fdf4_100%)]">
           <StatusBar />
           <div className="flex items-center justify-between gap-3 px-4 pt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-700 sm:px-5 sm:tracking-[0.2em]">
             <span>{screen.eyebrow}</span>
             <span>SkillMatch</span>
           </div>
-          <div className="flex flex-1 flex-col px-4 pb-4 pt-4 sm:px-5 sm:pb-5 sm:pt-5">
-            <ScreenContent screen={screen} />
+          <div className="flex min-h-0 flex-1 flex-col px-4 pb-4 pt-4 sm:px-5 sm:pb-5 sm:pt-5">
+            <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">
+              <ScreenContent screen={screen} />
+            </div>
             {["splash", "onboarding", "login"].includes(screen.key) ? null : (
               <BottomNav active={screen.key} />
             )}
@@ -236,7 +238,7 @@ function StatusBar() {
 function ScreenContent({ screen }: { screen: (typeof demoScreens)[number] }) {
   if (screen.key === "splash") {
     return (
-      <div className="flex flex-1 flex-col items-center justify-center text-center">
+      <div className="flex flex-1 flex-col items-center justify-start pt-16 text-center sm:justify-center sm:pt-0">
         <LogoMark size="large" />
         <h4 className="mt-6 text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
           {screen.title}

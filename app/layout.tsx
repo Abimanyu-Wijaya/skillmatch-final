@@ -13,9 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SkillMatch ID | Match Your Skills, Unlock Your Career",
+  title: "SkillMatch ID | AI Skill-Based Recruitment",
   description:
-    "Pitch deck interaktif SkillMatch ID, platform AI skill-based recruitment untuk mahasiswa tingkat akhir, fresh graduate, universitas, dan HR di Indonesia.",
+    "Interactive pitch deck and prototype for SkillMatch ID, an AI-powered skill-based recruitment platform for students, fresh graduates, and companies in Indonesia.",
+  openGraph: {
+    title: "SkillMatch ID | AI Skill-Based Recruitment",
+    description:
+      "Interactive pitch deck and prototype for SkillMatch ID, an AI-powered skill-based recruitment platform for students, fresh graduates, and companies in Indonesia.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
