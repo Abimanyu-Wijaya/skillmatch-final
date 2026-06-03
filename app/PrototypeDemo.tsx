@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const demoScreens = [
@@ -463,12 +464,21 @@ function AppHeader({ title, subtitle }: { title: string; subtitle: string }) {
 }
 
 function LogoMark({ size = "normal" }: { size?: "normal" | "large" }) {
-  const boxClass = size === "large" ? "size-20 rounded-3xl" : "size-11 rounded-2xl";
-  const markClass = size === "large" ? "size-9 rounded-xl" : "size-5 rounded-lg";
+  const boxClass =
+    size === "large"
+      ? "h-20 w-52 rounded-3xl p-3"
+      : "h-11 w-32 rounded-2xl p-1.5";
+  const imageSize = size === "large" ? { height: 80, width: 208 } : { height: 44, width: 128 };
 
   return (
-    <div className={`grid place-items-center bg-slate-950 ${boxClass}`}>
-      <div className={`bg-gradient-to-br from-cyan-300 to-emerald-300 ${markClass}`} />
+    <div className={`grid place-items-center overflow-hidden bg-black ${boxClass}`}>
+      <Image
+        alt="SkillMatch ID Logo"
+        className="size-full object-contain"
+        height={imageSize.height}
+        src="/skillmatch-logo.png"
+        width={imageSize.width}
+      />
     </div>
   );
 }

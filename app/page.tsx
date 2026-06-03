@@ -667,12 +667,17 @@ export default function Home() {
         <div className="relative mx-auto flex max-w-7xl flex-col">
           <nav className="fixed inset-x-3 top-4 z-50 mx-auto flex max-w-7xl items-center justify-between gap-2 rounded-full border border-white/70 bg-white/85 px-3 py-3 shadow-sm backdrop-blur-xl sm:inset-x-5 sm:top-5 sm:gap-3 sm:px-4">
             <a className="flex min-w-0 items-center gap-2 sm:gap-3" href="#top">
-              <span className="grid size-9 shrink-0 place-items-center rounded-2xl bg-slate-950 sm:size-10">
-                <span className="size-5 rounded-lg bg-gradient-to-br from-cyan-300 to-emerald-300" />
+              <span className="grid h-9 w-[118px] shrink-0 place-items-center overflow-hidden rounded-2xl bg-slate-950 p-1.5 sm:h-10 sm:w-[138px]">
+                <Image
+                  alt="SkillMatch ID Logo"
+                  className="size-full object-contain"
+                  height={40}
+                  priority
+                  src="/skillmatch-logo.png"
+                  width={138}
+                />
               </span>
-              <span className="min-w-0 truncate text-xs font-bold tracking-tight text-slate-950 max-[360px]:hidden sm:text-base">
-                SkillMatch ID
-              </span>
+              <span className="sr-only">SkillMatch ID</span>
             </a>
             <div className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
               {navItems.map((item) => (
@@ -756,7 +761,15 @@ export default function Home() {
               <div className="relative grid gap-4 md:grid-cols-[0.72fr_1fr]">
                 <div className="rounded-4xl bg-slate-950 p-4 text-white">
                   <div className="mb-5 flex items-center justify-between">
-                    <div className="size-10 rounded-2xl bg-gradient-to-br from-cyan-300 to-emerald-300" />
+                    <div className="grid h-11 w-36 place-items-center overflow-hidden rounded-2xl bg-black p-1.5">
+                      <Image
+                        alt="SkillMatch ID Logo"
+                        className="size-full object-contain"
+                        height={44}
+                        src="/skillmatch-logo.png"
+                        width={144}
+                      />
+                    </div>
                     <span className="rounded-full bg-white/10 px-3 py-1 text-xs">
                       Live fit
                     </span>
@@ -1541,6 +1554,15 @@ export default function Home() {
               </div>
               <div className="w-full">
                 <div className="rounded-3xl border border-white/15 bg-white p-5 text-center text-slate-950 shadow-2xl shadow-slate-950/25">
+                  <div className="mx-auto mb-4 grid h-12 w-40 place-items-center overflow-hidden rounded-2xl bg-black p-2">
+                    <Image
+                      alt="SkillMatch ID Logo"
+                      className="size-full object-contain"
+                      height={48}
+                      src="/skillmatch-logo.png"
+                      width={160}
+                    />
+                  </div>
                   <p className="text-base font-black tracking-tight">
                     Scan untuk membuka prototype
                   </p>

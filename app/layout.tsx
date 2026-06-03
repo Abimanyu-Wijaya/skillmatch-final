@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "SkillMatch ID | AI Skill-Based Recruitment",
   description:
     "Interactive pitch deck and prototype for SkillMatch ID, an AI-powered skill-based recruitment platform for students, fresh graduates, and companies in Indonesia.",
+  icons: {
+    icon: "/skillmatch-logo.png",
+    shortcut: "/skillmatch-logo.png",
+    apple: "/skillmatch-logo.png",
+  },
   openGraph: {
     title: "SkillMatch ID | AI Skill-Based Recruitment",
     description:
