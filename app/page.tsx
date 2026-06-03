@@ -914,7 +914,7 @@ export default function Home() {
               Target market
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
-              Built for Indonesia's graduate talent pipeline.
+              Built for Indonesia&apos;s graduate talent pipeline.
             </h2>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {markets.map((market) => (
