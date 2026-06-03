@@ -118,7 +118,7 @@ export default function PrototypeDemo() {
   };
 
   return (
-    <div className="w-full max-w-full overflow-hidden rounded-none border-0 bg-transparent p-0 shadow-none sm:rounded-[2rem] sm:border sm:border-slate-200 sm:bg-white/80 sm:p-4 sm:shadow-[0_28px_90px_rgba(15,23,42,0.12)] sm:backdrop-blur-xl md:p-6">
+    <div className="w-full max-w-full overflow-hidden rounded-none border-0 bg-transparent p-0 shadow-none sm:rounded-4xl sm:border sm:border-slate-200 sm:bg-white/80 sm:p-4 sm:shadow-[0_28px_90px_rgba(15,23,42,0.12)] sm:backdrop-blur-xl md:p-6">
       <div className="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
         <div className="mx-auto w-full max-w-[300px] sm:max-w-[330px]">
           <div className="mb-4 flex min-h-11 items-center justify-between gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 shadow-sm sm:px-4">
@@ -132,7 +132,7 @@ export default function PrototypeDemo() {
           <IPhoneFrame screen={screen} />
         </div>
 
-        <div className="min-w-0 rounded-[1.5rem] border border-slate-200 bg-white/85 p-4 shadow-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none">
+        <div className="min-w-0 rounded-3xl border border-slate-200 bg-white/85 p-4 shadow-sm sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none">
           <div className="mb-5 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">
             Interactive product demo
           </div>
@@ -197,8 +197,8 @@ export default function PrototypeDemo() {
 
 function IPhoneFrame({ screen }: { screen: (typeof demoScreens)[number] }) {
   return (
-    <div className="w-full max-w-full rounded-[2rem] border-[7px] border-slate-950 bg-slate-950 p-1.5 shadow-[0_40px_100px_rgba(2,6,23,0.35)] sm:rounded-[2.5rem] sm:border-[9px] sm:p-2">
-      <div className="relative aspect-[9/16] h-auto overflow-hidden rounded-[1.6rem] bg-slate-50 sm:aspect-[9/17] sm:rounded-[2rem]">
+    <div className="w-full max-w-full rounded-4xl border-[7px] border-slate-950 bg-slate-950 p-1.5 shadow-[0_40px_100px_rgba(2,6,23,0.35)] sm:rounded-[2.5rem] sm:border-[9px] sm:p-2">
+      <div className="relative aspect-[9/16] h-auto overflow-hidden rounded-[1.6rem] bg-slate-50 sm:aspect-[9/17] sm:rounded-4xl">
         <div className="absolute left-1/2 top-2 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-slate-950 sm:h-7 sm:w-32" />
         <div className="flex h-full min-h-0 flex-col bg-[linear-gradient(145deg,#f8fafc_0%,#ecfeff_46%,#f0fdf4_100%)]">
           <StatusBar />
@@ -256,7 +256,7 @@ function ScreenContent({ screen }: { screen: (typeof demoScreens)[number] }) {
   if (screen.key === "onboarding") {
     return (
       <div className="flex flex-1 flex-col">
-        <div className="rounded-[1.5rem] bg-slate-950 p-4 text-white shadow-xl sm:p-5">
+        <div className="rounded-3xl bg-slate-950 p-4 text-white shadow-xl sm:p-5">
           <LogoMark />
           <h4 className="mt-6 text-xl font-black leading-tight sm:text-2xl">
             {screen.title}
@@ -337,8 +337,8 @@ function ScreenContent({ screen }: { screen: (typeof demoScreens)[number] }) {
       <div className="flex-1">
         <AppHeader title={screen.title} subtitle={screen.subtitle} />
         <div className="mt-5 grid place-items-center">
-          <div className="conic-ring grid h-36 w-36 place-items-center rounded-full sm:h-40 sm:w-40">
-            <div className="grid h-28 w-28 place-items-center rounded-full bg-white sm:h-30 sm:w-30">
+          <div className="conic-ring grid size-36 place-items-center rounded-full sm:size-40">
+            <div className="grid size-28 place-items-center rounded-full bg-white sm:size-30">
               <div className="text-center">
                 <p className="text-4xl font-black text-slate-950">88%</p>
                 <p className="text-xs font-bold text-slate-500">
@@ -450,7 +450,7 @@ function AppHeader({ title, subtitle }: { title: string; subtitle: string }) {
     <div>
       <div className="mb-5 flex items-center justify-between">
         <LogoMark />
-        <div className="grid h-10 w-10 place-items-center rounded-full bg-white text-sm font-black text-slate-950 shadow-sm">
+        <div className="grid size-10 place-items-center rounded-full bg-white text-sm font-black text-slate-950 shadow-sm">
           D
         </div>
       </div>
@@ -463,8 +463,8 @@ function AppHeader({ title, subtitle }: { title: string; subtitle: string }) {
 }
 
 function LogoMark({ size = "normal" }: { size?: "normal" | "large" }) {
-  const boxClass = size === "large" ? "h-20 w-20 rounded-3xl" : "h-11 w-11 rounded-2xl";
-  const markClass = size === "large" ? "h-9 w-9 rounded-xl" : "h-5 w-5 rounded-lg";
+  const boxClass = size === "large" ? "size-20 rounded-3xl" : "size-11 rounded-2xl";
+  const markClass = size === "large" ? "size-9 rounded-xl" : "size-5 rounded-lg";
 
   return (
     <div className={`grid place-items-center bg-slate-950 ${boxClass}`}>
@@ -566,7 +566,7 @@ function Timeline({ items }: { items: string[] }) {
         <div className="flex gap-3" key={item}>
           <div className="flex flex-col items-center">
             <div
-              className={`h-5 w-5 rounded-full ${
+              className={`size-5 rounded-full ${
                 index < 3 ? "bg-emerald-400" : "bg-slate-200"
               }`}
             />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PrototypeDemo from "./PrototypeDemo";
 
 const navItems = [
@@ -455,7 +456,7 @@ function GlassPanel({
 }) {
   return (
     <div
-      className={`rounded-[2rem] border border-white/60 bg-white/75 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur-xl ${className}`}
+      className={`rounded-4xl border border-white/60 bg-white/75 shadow-[0_24px_80px_rgba(15,23,42,0.12)] backdrop-blur-xl ${className}`}
     >
       {children}
     </div>
@@ -502,7 +503,7 @@ function SignalBadge({ value }: { value: string }) {
 
 function HRDashboardShowcase() {
   return (
-    <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.12)]">
+    <div className="overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.12)]">
       <div className="grid border-b border-slate-200 bg-slate-950 p-5 text-white md:grid-cols-[1fr_auto] md:items-center">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-emerald-300">
@@ -666,8 +667,8 @@ export default function Home() {
         <div className="relative mx-auto flex max-w-7xl flex-col">
           <nav className="fixed inset-x-3 top-4 z-50 mx-auto flex max-w-7xl items-center justify-between gap-2 rounded-full border border-white/70 bg-white/85 px-3 py-3 shadow-sm backdrop-blur-xl sm:inset-x-5 sm:top-5 sm:gap-3 sm:px-4">
             <a className="flex min-w-0 items-center gap-2 sm:gap-3" href="#top">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-2xl bg-slate-950 sm:h-10 sm:w-10">
-                <span className="h-5 w-5 rounded-lg bg-gradient-to-br from-cyan-300 to-emerald-300" />
+              <span className="grid size-9 shrink-0 place-items-center rounded-2xl bg-slate-950 sm:size-10">
+                <span className="size-5 rounded-lg bg-gradient-to-br from-cyan-300 to-emerald-300" />
               </span>
               <span className="min-w-0 truncate text-xs font-bold tracking-tight text-slate-950 max-[360px]:hidden sm:text-base">
                 SkillMatch ID
@@ -751,11 +752,11 @@ export default function Home() {
             </div>
 
             <GlassPanel className="relative mx-auto w-full max-w-xl p-5">
-              <div className="absolute -right-6 -top-6 h-24 w-24 rounded-[2rem] bg-emerald-300/80 blur-2xl" />
+              <div className="absolute -right-6 -top-6 size-24 rounded-4xl bg-emerald-300/80 blur-2xl" />
               <div className="relative grid gap-4 md:grid-cols-[0.72fr_1fr]">
-                <div className="rounded-[2rem] bg-slate-950 p-4 text-white">
+                <div className="rounded-4xl bg-slate-950 p-4 text-white">
                   <div className="mb-5 flex items-center justify-between">
-                    <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-cyan-300 to-emerald-300" />
+                    <div className="size-10 rounded-2xl bg-gradient-to-br from-cyan-300 to-emerald-300" />
                     <span className="rounded-full bg-white/10 px-3 py-1 text-xs">
                       Live fit
                     </span>
@@ -765,7 +766,7 @@ export default function Home() {
                     UI/UX Designer Intern
                   </h2>
                   <div className="mt-8 grid h-40 place-items-center rounded-full bg-[conic-gradient(from_90deg,#34d399_0_78%,rgba(255,255,255,0.15)_78%_100%)]">
-                    <div className="grid h-28 w-28 place-items-center rounded-full bg-slate-950">
+                    <div className="grid size-28 place-items-center rounded-full bg-slate-950">
                       <div className="text-center">
                         <p className="text-3xl font-bold">88%</p>
                         <p className="text-xs text-cyan-100">match</p>
@@ -856,7 +857,7 @@ export default function Home() {
                   className="flex items-center gap-4 rounded-3xl border border-slate-100 bg-white p-4"
                   key={step}
                 >
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-slate-950 text-sm font-bold text-white">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-slate-950 text-sm font-bold text-white">
                     {idx + 1}
                   </span>
                   <p className="font-semibold text-slate-800">{step}</p>
@@ -909,10 +910,10 @@ export default function Home() {
                 className="relative rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-100"
                 key={step.title}
               >
-                <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-slate-950 text-lg font-black text-emerald-300 shadow-lg shadow-slate-950/15">
+                <div className="mb-6 grid size-14 place-items-center rounded-2xl bg-slate-950 text-lg font-black text-emerald-300 shadow-lg shadow-slate-950/15">
                   {idx + 1}
                 </div>
-                <div className="mb-5 h-10 w-10 rounded-2xl bg-gradient-to-br from-cyan-300 to-emerald-300" />
+                <div className="mb-5 size-10 rounded-2xl bg-gradient-to-br from-cyan-300 to-emerald-300" />
                 <h3 className="text-lg font-semibold leading-7 text-slate-950">
                   {step.title}
                 </h3>
@@ -983,7 +984,7 @@ export default function Home() {
                   className="rounded-3xl border border-slate-100 bg-white p-4 shadow-sm"
                   key={model.title}
                 >
-                  <div className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-emerald-300">
+                  <div className="mb-4 grid size-11 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-emerald-300">
                     {model.title
                       .split(" ")
                       .map((word) => word[0])
@@ -1035,7 +1036,7 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold tracking-tight">
                     {competitor.name}
                   </h3>
-                  <span className="h-3 w-3 rounded-full bg-gradient-to-br from-cyan-300 to-emerald-300" />
+                  <span className="size-3 rounded-full bg-gradient-to-br from-cyan-300 to-emerald-300" />
                 </div>
                 <div className="space-y-4">
                   <div>
@@ -1075,7 +1076,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-8 overflow-hidden rounded-[2rem] border border-white/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.18)]">
+          <div className="mt-8 overflow-hidden rounded-4xl border border-white/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.18)]">
             <div className="border-b border-slate-200 bg-slate-50 px-5 py-4">
               <p className="text-sm font-black uppercase tracking-[0.22em] text-cyan-700">
                 Feature comparison
@@ -1127,7 +1128,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.08] p-6">
+            <div className="rounded-4xl border border-white/10 bg-white/[0.08] p-6">
               <p className="text-sm font-black uppercase tracking-[0.22em] text-emerald-300">
                 Positioning Map
               </p>
@@ -1151,8 +1152,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-4 sm:min-h-[420px] sm:p-5">
-              <div className="absolute inset-6 rounded-[1.5rem] border border-white/10 bg-[linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:25%_25%]" />
+            <div className="relative min-h-[360px] overflow-hidden rounded-4xl border border-white/10 bg-white/[0.08] p-4 sm:min-h-[420px] sm:p-5">
+              <div className="absolute inset-6 rounded-3xl border border-white/10 bg-[linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:25%_25%]" />
               <div className="absolute bottom-12 left-12 right-8 h-px bg-cyan-200/45" />
               <div className="absolute bottom-12 left-12 top-8 w-px bg-cyan-200/45" />
               <span className="absolute bottom-5 left-8 max-w-24 text-[10px] font-black uppercase tracking-[0.14em] text-slate-400 sm:left-10 sm:max-w-28 sm:tracking-[0.18em]">
@@ -1220,7 +1221,7 @@ export default function Home() {
                   Kesimpulan Strategis
                 </h2>
               </div>
-              <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur">
+              <div className="rounded-4xl border border-white/10 bg-white/10 p-6 backdrop-blur">
                 <p className="text-pretty text-lg font-semibold leading-8 text-slate-100 md:text-xl">
                   SkillMatch ID tidak perlu menjadi job portal terbesar. Fokus
                   utamanya adalah menjadi platform rekrutmen berbasis skill yang
@@ -1246,7 +1247,7 @@ export default function Home() {
           <div className="grid gap-5 lg:grid-cols-2">
             {mvpScope.map((scope, scopeIdx) => (
               <article
-                className={`rounded-[2rem] border p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                className={`rounded-4xl border p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
                   scopeIdx === 0
                     ? "border-emerald-200 bg-white hover:shadow-emerald-100"
                     : "border-slate-200 bg-slate-950 text-white hover:shadow-slate-300"
@@ -1255,7 +1256,7 @@ export default function Home() {
               >
                 <div className="mb-6 flex items-center gap-3">
                   <span
-                    className={`grid h-12 w-12 place-items-center rounded-2xl text-sm font-black ${
+                    className={`grid size-12 place-items-center rounded-2xl text-sm font-black ${
                       scopeIdx === 0
                         ? "bg-emerald-300 text-slate-950"
                         : "bg-white text-slate-950"
@@ -1331,7 +1332,7 @@ export default function Home() {
                 className="relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-100"
                 key={metric.label}
               >
-                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-gradient-to-br from-cyan-100 to-emerald-100" />
+                <div className="absolute right-0 top-0 size-24 rounded-bl-[3rem] bg-gradient-to-br from-cyan-100 to-emerald-100" />
                 <p className="relative text-4xl font-black tracking-tight text-slate-950">
                   {metric.value}
                 </p>
@@ -1353,7 +1354,7 @@ export default function Home() {
             text="Slide ini memperlihatkan perubahan pengalaman untuk Dinda sebagai talent dan Bu Rina sebagai HR."
           />
           <div className="grid gap-5 lg:grid-cols-2">
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="rounded-4xl border border-slate-200 bg-white p-6 shadow-sm">
               <p className="text-sm font-black uppercase tracking-[0.24em] text-slate-500">
                 Before
               </p>
@@ -1368,7 +1369,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="rounded-[2rem] bg-slate-950 p-6 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)]">
+            <div className="rounded-4xl bg-slate-950 p-6 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)]">
               <p className="text-sm font-black uppercase tracking-[0.24em] text-emerald-300">
                 After
               </p>
@@ -1440,7 +1441,7 @@ export default function Home() {
                 className="relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm"
                 key={item.phase}
               >
-                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-gradient-to-br from-cyan-100 to-emerald-100" />
+                <div className="absolute right-0 top-0 size-24 rounded-bl-[3rem] bg-gradient-to-br from-cyan-100 to-emerald-100" />
                 <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-cyan-600">
                   {item.phase}
                 </p>
@@ -1465,7 +1466,7 @@ export default function Home() {
         id="presentation-guide"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+          <div className="rounded-4xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
             <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-600">
@@ -1485,7 +1486,7 @@ export default function Home() {
                   className="flex gap-4 rounded-3xl border border-slate-100 bg-slate-50 p-4 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white hover:shadow-lg hover:shadow-cyan-100"
                   key={point}
                 >
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-emerald-300">
+                  <span className="grid size-9 shrink-0 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-emerald-300">
                     {idx + 1}
                   </span>
                   <p className="text-sm font-semibold leading-6 text-slate-700">
@@ -1501,9 +1502,9 @@ export default function Home() {
 
       <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="closing">
         <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-[1.75rem] bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/20 sm:rounded-[2rem] sm:p-8 md:p-12">
+          <div className="relative overflow-hidden rounded-[1.75rem] bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/20 sm:rounded-4xl sm:p-8 md:p-12">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.25),transparent_28%),radial-gradient(circle_at_78%_12%,rgba(52,211,153,0.22),transparent_24%)]" />
-            <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div className="relative grid gap-8 lg:grid-cols-[1fr_280px] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-300">
                   13 Closing
@@ -1538,12 +1539,36 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <a
-                className="inline-flex min-h-11 justify-center rounded-full bg-white px-6 py-3.5 text-sm font-bold text-slate-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-200 sm:px-7 sm:py-4"
-                href="#top"
-              >
-                Kembali ke atas
-              </a>
+              <div className="w-full">
+                <div className="rounded-3xl border border-white/15 bg-white p-5 text-center text-slate-950 shadow-2xl shadow-slate-950/25">
+                  <p className="text-base font-black tracking-tight">
+                    Scan untuk membuka prototype
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    Buka interactive pitch deck dan prototype SkillMatch ID
+                    langsung dari perangkat Anda.
+                  </p>
+                  <div className="mx-auto mt-5 grid size-[170px] place-items-center rounded-3xl border border-slate-200 bg-white p-3 shadow-sm sm:size-[200px]">
+                    <Image
+                      alt="QR Code SkillMatch ID Prototype"
+                      className="size-full rounded-2xl object-contain"
+                      height={200}
+                      sizes="(max-width: 640px) 170px, 200px"
+                      src="/qrcode_358096001_26ebb73ca4fbac75189978bb4b701405.png"
+                      width={200}
+                    />
+                  </div>
+                  <p className="mt-4 text-xs font-semibold leading-5 text-slate-500">
+                    Arahkan kamera HP ke QR Code untuk membuka web.
+                  </p>
+                </div>
+                <a
+                  className="mt-4 inline-flex min-h-11 w-full justify-center rounded-full bg-white px-6 py-3.5 text-sm font-bold text-slate-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-200 sm:px-7 sm:py-4"
+                  href="#top"
+                >
+                  Kembali ke atas
+                </a>
+              </div>
             </div>
           </div>
         </div>
