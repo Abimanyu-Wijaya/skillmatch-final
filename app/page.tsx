@@ -5,6 +5,7 @@ const navItems = [
   { label: "Solution", href: "#solution" },
   { label: "Product", href: "#prototype" },
   { label: "Business", href: "#business-model" },
+  { label: "Competitor", href: "#competitor-analysis" },
   { label: "Advantage", href: "#competitive" },
   { label: "Roadmap", href: "#roadmap" },
 ];
@@ -94,6 +95,287 @@ const businessModels = [
   },
 ];
 
+const competitors = [
+  {
+    name: "LinkedIn",
+    positioning: "Professional networking & global recruitment platform",
+    strength:
+      "Strong professional network, recruiter tools, employer branding, large talent pool.",
+    gap: "Fresh graduates often have limited experience and unverified skills, making it harder to stand out only through profile and work history.",
+    response:
+      "Focus on Verified Skill, assessment evidence, and Auto Portfolio for early-career talent.",
+  },
+  {
+    name: "JobStreet",
+    positioning: "Large job portal for general job search in Indonesia",
+    strength:
+      "Strong job listing coverage, wide awareness, trusted by many job seekers and employers.",
+    gap: "Job seekers may face too many listings and limited guidance on which jobs truly match their skills.",
+    response:
+      "Rank opportunities using Match Score based on verified skills and career interest.",
+  },
+  {
+    name: "Glints",
+    positioning:
+      "Career discovery and hiring platform for young professionals and startups",
+    strength:
+      "Relevant for young talent, startup jobs, internships, and career content.",
+    gap: "Career discovery is strong, but skill verification and structured career roadmap can be more deeply integrated.",
+    response:
+      "Combine AI Skill Assessment, job matching, and personal Career Roadmap in one flow.",
+  },
+  {
+    name: "Dealls",
+    positioning:
+      "Indonesian job portal and career platform with mentoring and employer tools",
+    strength:
+      "Strong career development features, CV review, mentoring, and recruitment tools.",
+    gap: "Still relies heavily on career profile and recruitment workflow, while verified skill evidence and Auto Portfolio can become stronger differentiation.",
+    response:
+      "Build an end-to-end skill-first journey from onboarding, assessment, Auto Portfolio, job match, to HR shortlist.",
+  },
+];
+
+const comparisonRows = [
+  {
+    feature: "Job listing",
+    linkedin: "Strong",
+    jobstreet: "Strong",
+    glints: "Strong",
+    dealls: "Strong",
+    skillmatch: "Medium",
+  },
+  {
+    feature: "Professional networking",
+    linkedin: "Strong",
+    jobstreet: "Limited",
+    glints: "Medium",
+    dealls: "Medium",
+    skillmatch: "Not focus",
+  },
+  {
+    feature: "Fresh graduate focus",
+    linkedin: "Medium",
+    jobstreet: "Medium",
+    glints: "Strong",
+    dealls: "Strong",
+    skillmatch: "Strong",
+  },
+  {
+    feature: "AI skill matching",
+    linkedin: "Medium",
+    jobstreet: "Limited",
+    glints: "Medium",
+    dealls: "Medium",
+    skillmatch: "Strong",
+  },
+  {
+    feature: "Skill verification / assessment",
+    linkedin: "Limited",
+    jobstreet: "Limited",
+    glints: "Medium",
+    dealls: "Medium",
+    skillmatch: "Strong",
+  },
+  {
+    feature: "Auto portfolio builder",
+    linkedin: "Limited",
+    jobstreet: "Not focus",
+    glints: "Limited",
+    dealls: "Medium",
+    skillmatch: "Strong",
+  },
+  {
+    feature: "Personal career roadmap",
+    linkedin: "Limited",
+    jobstreet: "Limited",
+    glints: "Medium",
+    dealls: "Medium",
+    skillmatch: "Strong",
+  },
+  {
+    feature: "HR shortlist based on verified skills",
+    linkedin: "Medium",
+    jobstreet: "Limited",
+    glints: "Medium",
+    dealls: "Medium",
+    skillmatch: "Strong",
+  },
+  {
+    feature: "Campus-first acquisition",
+    linkedin: "Limited",
+    jobstreet: "Limited",
+    glints: "Medium",
+    dealls: "Medium",
+    skillmatch: "Strong",
+  },
+];
+
+const positioningPoints = [
+  {
+    name: "JobStreet",
+    note: "General Job Portal",
+    x: "17%",
+    y: "54%",
+    featured: false,
+  },
+  {
+    name: "LinkedIn",
+    note: "Professional network",
+    x: "30%",
+    y: "47%",
+    featured: false,
+  },
+  {
+    name: "Glints",
+    note: "Career discovery",
+    x: "56%",
+    y: "33%",
+    featured: false,
+  },
+  {
+    name: "Dealls",
+    note: "Career platform",
+    x: "63%",
+    y: "29%",
+    featured: false,
+  },
+  {
+    name: "SkillMatch ID",
+    note: "Skill-Based Recruitment",
+    x: "78%",
+    y: "15%",
+    featured: true,
+  },
+];
+
+const mvpScope = [
+  {
+    title: "Tahap Awal",
+    items: [
+      "Registrasi talent dan HR",
+      "Setup profil dan skill",
+      "AI Skill Assessment sederhana",
+      "Match Score pekerjaan",
+      "Auto Portfolio dasar",
+      "HR Dashboard kandidat",
+      "Tracking lamaran",
+    ],
+  },
+  {
+    title: "Tahap Lanjutan",
+    items: [
+      "Integrasi career center kampus",
+      "Advanced AI recommendation",
+      "Premium HR analytics",
+      "Partnership bootcamp",
+      "Company subscription",
+      "University partnership dashboard",
+    ],
+  },
+];
+
+const goToMarketSteps = [
+  {
+    step: "01",
+    title: "Pilot Market Yogyakarta",
+    text: "Fokus pada mahasiswa tingkat akhir, fresh graduate, dan startup lokal.",
+  },
+  {
+    step: "02",
+    title: "Campus Activation",
+    text: "Kerja sama dengan career center, komunitas mahasiswa, webinar karier, dan booth kampus.",
+  },
+  {
+    step: "03",
+    title: "B2B Outreach",
+    text: "Mengajak startup, UMKM, dan perusahaan yang membutuhkan kandidat fresh graduate berbasis skill.",
+  },
+  {
+    step: "04",
+    title: "Scale Up",
+    text: "Ekspansi ke Jakarta, Bandung, Surabaya, dan kota besar dengan populasi mahasiswa tinggi.",
+  },
+];
+
+const successMetrics = [
+  {
+    value: "5.000",
+    label: "pengguna aktif tahun pertama",
+  },
+  {
+    value: "500",
+    label: "talent menyelesaikan assessment",
+  },
+  {
+    value: "100",
+    label: "perusahaan terdaftar",
+  },
+  {
+    value: "1.000",
+    label: "lamaran berbasis Match Score",
+  },
+  {
+    value: "60%",
+    label: "waktu screening HR lebih hemat",
+  },
+  {
+    value: "30%",
+    label: "peningkatan relevansi kandidat",
+  },
+];
+
+const presentationGuide = [
+  "Masalah: fresh graduate sulit membuktikan skill, HR sulit screening kandidat.",
+  "Solusi: SkillMatch ID mencocokkan talent dan perusahaan berdasarkan skill tervalidasi.",
+  "Demo Talent: Dinda mengisi profil, mengikuti AI Skill Assessment, dan mendapat Match Score.",
+  "Demo Apply: Dinda melamar pekerjaan menggunakan Verified Skill dan Auto Portfolio.",
+  "Demo HR: Bu Rina melihat shortlist kandidat dengan Match Score dan bukti skill.",
+  "Bisnis: pendapatan dari HR Subscription, Pay-per-Hire, Premium Tools, dan University Partnership.",
+];
+
+const howItWorks = [
+  {
+    title: "Lengkapi profil & pilih skill",
+    text: "Dinda mengisi profil DKV, target role, domisili, dan skill utama.",
+  },
+  {
+    title: "Ikuti AI Skill Assessment",
+    text: "Assessment berbasis role memvalidasi kemampuan desain dan komunikasi.",
+  },
+  {
+    title: "Dapatkan Match Score & Career Roadmap",
+    text: "AI memberi skor kecocokan, skill gap, dan langkah pengembangan.",
+  },
+  {
+    title: "Lamar pekerjaan dengan Auto Portfolio",
+    text: "Dinda mengirim portfolio otomatis berisi evidence dan verified badge.",
+  },
+  {
+    title: "HR menerima shortlist kandidat tervalidasi",
+    text: "Bu Rina melihat kandidat berperingkat dengan assessment evidence.",
+  },
+];
+
+const beforeAfter = [
+  {
+    before: "Mahasiswa bingung menentukan karier",
+    after: "Job match berbasis skill tervalidasi",
+  },
+  {
+    before: "HR screening CV secara manual",
+    after: "HR mendapat shortlist kandidat otomatis",
+  },
+  {
+    before: "Lowongan sering tidak relevan",
+    after: "Auto Portfolio membuat profil kandidat lebih profesional",
+  },
+  {
+    before: "Portfolio kandidat tidak standar",
+    after: "Career Roadmap membantu talent berkembang",
+  },
+];
+
 const competitiveAdvantages = [
   {
     traditional: "Rely on CV and keyword matching.",
@@ -180,6 +462,44 @@ function GlassPanel({
   );
 }
 
+function NextSectionButton({
+  href,
+  label,
+}: {
+  href: string;
+  label: string;
+}) {
+  return (
+    <div className="mt-10 flex justify-center">
+      <a
+        className="inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-center text-sm font-black text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-50"
+        href={href}
+      >
+        Next Section: {label}
+      </a>
+    </div>
+  );
+}
+
+function SignalBadge({ value }: { value: string }) {
+  const signalStyles: Record<string, string> = {
+    Strong: "bg-emerald-100 text-emerald-800 ring-emerald-200",
+    Medium: "bg-cyan-100 text-cyan-800 ring-cyan-200",
+    Limited: "bg-slate-100 text-slate-600 ring-slate-200",
+    "Not focus": "bg-slate-950 text-white ring-slate-800",
+  };
+
+  return (
+    <span
+      className={`inline-flex min-w-20 justify-center whitespace-normal rounded-full px-3 py-1.5 text-center text-xs font-black ring-1 ${
+        signalStyles[value] ?? signalStyles.Limited
+      }`}
+    >
+      {value}
+    </span>
+  );
+}
+
 function HRDashboardShowcase() {
   return (
     <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.12)]">
@@ -199,7 +519,22 @@ function HRDashboardShowcase() {
 
       <div className="grid gap-5 bg-slate-50 p-5 lg:grid-cols-[0.72fr_1.28fr]">
         <div className="space-y-5">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="rounded-3xl bg-[linear-gradient(145deg,#020617_0%,#0f172a_62%,#064e5f_100%)] p-5 text-white shadow-xl shadow-slate-950/15">
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-emerald-300">
+              Business KPI
+            </p>
+            <p className="mt-4 text-4xl font-black tracking-tight">
+              60%
+            </p>
+            <p className="mt-2 text-lg font-semibold">
+              waktu screening lebih hemat
+            </p>
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Bu Rina bisa fokus pada kandidat yang sudah punya Match Score dan
+              assessment evidence.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2">
             {[
               ["128", "Total kandidat"],
               ["42", "Screened"],
@@ -305,7 +640,7 @@ function HRDashboardShowcase() {
               </div>
             </div>
 
-            <div className="mt-5 grid grid-cols-2 gap-3">
+            <div className="mt-5 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2">
               <div className="rounded-2xl bg-white/10 p-4">
                 <p className="text-xl font-black">88</p>
                 <p className="text-[10px] text-cyan-100">Assessment</p>
@@ -325,16 +660,16 @@ function HRDashboardShowcase() {
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f8fbff] text-slate-950">
-      <section className="relative min-h-[92vh] px-5 pb-12 pt-28 sm:px-8 lg:px-10">
+      <section className="relative min-h-[92vh] px-4 pb-12 pt-24 sm:px-8 sm:pt-28 lg:px-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(45,212,191,0.28),transparent_26%),radial-gradient(circle_at_88%_12%,rgba(14,165,233,0.25),transparent_28%),linear-gradient(135deg,#ffffff_0%,#eff6ff_46%,#ecfdf5_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#f8fbff]" />
         <div className="relative mx-auto flex max-w-7xl flex-col">
-          <nav className="fixed inset-x-5 top-5 z-50 mx-auto flex max-w-7xl items-center justify-between gap-3 rounded-full border border-white/70 bg-white/80 px-3 py-3 shadow-sm backdrop-blur-xl sm:px-4">
+          <nav className="fixed inset-x-3 top-4 z-50 mx-auto flex max-w-7xl items-center justify-between gap-2 rounded-full border border-white/70 bg-white/85 px-3 py-3 shadow-sm backdrop-blur-xl sm:inset-x-5 sm:top-5 sm:gap-3 sm:px-4">
             <a className="flex min-w-0 items-center gap-2 sm:gap-3" href="#top">
-              <span className="grid h-10 w-10 place-items-center rounded-2xl bg-slate-950">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-2xl bg-slate-950 sm:h-10 sm:w-10">
                 <span className="h-5 w-5 rounded-lg bg-gradient-to-br from-cyan-300 to-emerald-300" />
               </span>
-              <span className="text-sm font-bold tracking-tight text-slate-950 sm:text-base">
+              <span className="min-w-0 truncate text-xs font-bold tracking-tight text-slate-950 max-[360px]:hidden sm:text-base">
                 SkillMatch ID
               </span>
             </a>
@@ -350,7 +685,7 @@ export default function Home() {
               ))}
             </div>
             <a
-              className="shrink-0 rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-slate-950/10 transition hover:bg-cyan-700"
+              className="min-h-11 shrink-0 rounded-full bg-slate-950 px-3 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-950/10 transition hover:bg-cyan-700 sm:px-4"
               href="#prototype"
             >
               <span className="hidden sm:inline">Lihat Prototype</span>
@@ -375,6 +710,12 @@ export default function Home() {
                 dan melamar pekerjaan yang paling cocok dengan skill mereka.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  className="rounded-full bg-emerald-300 px-6 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-emerald-300/30 transition hover:-translate-y-0.5 hover:bg-cyan-300"
+                  href="#problem"
+                >
+                  Start Presentation
+                </a>
                 <a
                   className="rounded-full bg-slate-950 px-6 py-4 text-center text-sm font-bold text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-cyan-700"
                   href="#prototype"
@@ -466,7 +807,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="problem">
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="problem">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="01 Problem"
@@ -489,10 +830,11 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <NextSectionButton href="#solution" label="Solution" />
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="solution">
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="solution">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-emerald-500">
@@ -523,9 +865,10 @@ export default function Home() {
             </div>
           </GlassPanel>
         </div>
+        <NextSectionButton href="#features" label="Product" />
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="features">
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="features">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="03 Product"
@@ -548,10 +891,42 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <NextSectionButton href="#how-it-works" label="Cara Kerja" />
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="prototype">
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="how-it-works">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="03 Product Flow"
+            title="Cara kerja SkillMatch ID"
+            text="Flow ini bisa dipresentasikan sebagai alur utama dari BMC: kandidat membuktikan skill, sistem memberi rekomendasi, HR menerima kandidat tervalidasi."
+          />
+          <div className="relative grid gap-5 lg:grid-cols-5">
+            <div className="absolute left-6 right-6 top-10 hidden h-px bg-gradient-to-r from-cyan-200 via-emerald-300 to-cyan-200 lg:block" />
+            {howItWorks.map((step, idx) => (
+              <article
+                className="relative rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-100"
+                key={step.title}
+              >
+                <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-slate-950 text-lg font-black text-emerald-300 shadow-lg shadow-slate-950/15">
+                  {idx + 1}
+                </div>
+                <div className="mb-5 h-10 w-10 rounded-2xl bg-gradient-to-br from-cyan-300 to-emerald-300" />
+                <h3 className="text-lg font-semibold leading-7 text-slate-950">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  {step.text}
+                </p>
+              </article>
+            ))}
+          </div>
+          <NextSectionButton href="#prototype" label="Product Demo" />
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="prototype">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="03 Product Demo"
@@ -559,10 +934,11 @@ export default function Home() {
             text="Setiap layar dibuat seperti mobile app nyata: status bar, input, job cards, skill chips, Match Score badge, progress bar, dan bottom navigation."
           />
           <PrototypeDemo />
+          <NextSectionButton href="#dashboard" label="HR Dashboard" />
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="dashboard">
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="dashboard">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
             eyebrow="03 HR Dashboard"
@@ -570,10 +946,11 @@ export default function Home() {
             text="Dashboard perusahaan dirancang untuk mempercepat screening intern dan fresh graduate tanpa kehilangan konteks skill, portfolio, dan assessment."
           />
           <HRDashboardShowcase />
+          <NextSectionButton href="#business-model" label="Business Model" />
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="business-model">
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="business-model">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <GlassPanel className="p-7">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-600">
@@ -622,12 +999,399 @@ export default function Home() {
             </div>
           </GlassPanel>
         </div>
+        <NextSectionButton
+          href="#competitor-analysis"
+          label="Analisis Kompetitor"
+        />
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="competitive">
+      <section
+        className="px-4 py-16 text-white sm:px-8 md:py-20 lg:px-10"
+        id="competitor-analysis"
+      >
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] bg-[linear-gradient(145deg,#020617_0%,#0f172a_56%,#053d4c_100%)] px-4 py-10 shadow-[0_32px_100px_rgba(15,23,42,0.22)] sm:rounded-[2.25rem] sm:px-8 sm:py-12 lg:px-10">
+          <div className="mx-auto mb-10 max-w-4xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-emerald-300">
+              05 Competitor Analysis
+            </p>
+            <h2 className="text-balance text-3xl font-semibold tracking-tight md:text-5xl">
+              Analisis Kompetitor
+            </h2>
+            <p className="mt-5 text-pretty text-base leading-7 text-slate-300 md:text-lg">
+              SkillMatch ID tidak bersaing sebagai job portal biasa. SkillMatch
+              ID mengambil posisi sebagai platform rekrutmen berbasis skill
+              yang membantu talent membuktikan kemampuan dan membantu HR
+              menemukan kandidat yang lebih relevan.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {competitors.map((competitor) => (
+              <article
+                className="rounded-[1.75rem] border border-white/10 bg-white/[0.08] p-5 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.12]"
+                key={competitor.name}
+              >
+                <div className="mb-5 flex items-center justify-between gap-3">
+                  <h3 className="text-2xl font-semibold tracking-tight">
+                    {competitor.name}
+                  </h3>
+                  <span className="h-3 w-3 rounded-full bg-gradient-to-br from-cyan-300 to-emerald-300" />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-200">
+                      Positioning
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-100">
+                      {competitor.positioning}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-200">
+                      Strength
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
+                      {competitor.strength}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                      Gap / Opportunity
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">
+                      {competitor.gap}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-emerald-300/20 bg-emerald-300/10 p-4">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-200">
+                      SkillMatch ID Response
+                    </p>
+                    <p className="mt-2 text-sm font-semibold leading-6 text-white">
+                      {competitor.response}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 overflow-hidden rounded-[2rem] border border-white/10 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.18)]">
+            <div className="border-b border-slate-200 bg-slate-50 px-5 py-4">
+              <p className="text-sm font-black uppercase tracking-[0.22em] text-cyan-700">
+                Feature comparison
+              </p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[760px] border-collapse text-left md:min-w-[920px]">
+                <thead>
+                  <tr className="border-b border-slate-200 text-xs font-black uppercase tracking-[0.16em] text-slate-500">
+                    <th className="px-5 py-4">Feature</th>
+                    <th className="px-4 py-4">LinkedIn</th>
+                    <th className="px-4 py-4">JobStreet</th>
+                    <th className="px-4 py-4">Glints</th>
+                    <th className="px-4 py-4">Dealls</th>
+                    <th className="px-4 py-4 text-emerald-700">
+                      SkillMatch ID
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row) => (
+                    <tr
+                      className="border-b border-slate-100 last:border-0"
+                      key={row.feature}
+                    >
+                      <td className="px-5 py-4 text-sm font-bold text-slate-950">
+                        {row.feature}
+                      </td>
+                      <td className="px-4 py-4">
+                        <SignalBadge value={row.linkedin} />
+                      </td>
+                      <td className="px-4 py-4">
+                        <SignalBadge value={row.jobstreet} />
+                      </td>
+                      <td className="px-4 py-4">
+                        <SignalBadge value={row.glints} />
+                      </td>
+                      <td className="px-4 py-4">
+                        <SignalBadge value={row.dealls} />
+                      </td>
+                      <td className="bg-emerald-50/70 px-4 py-4">
+                        <SignalBadge value={row.skillmatch} />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.08] p-6">
+              <p className="text-sm font-black uppercase tracking-[0.22em] text-emerald-300">
+                Positioning Map
+              </p>
+              <h3 className="mt-4 text-3xl font-semibold tracking-tight">
+                Skill-first, campus-first, dan lebih personal untuk early-career talent.
+              </h3>
+              <p className="mt-4 leading-7 text-slate-300">
+                Peta ini menunjukkan arah positioning: SkillMatch ID tidak
+                mengejar skala listing terbesar, tetapi memperkuat personalisasi
+                dan evidence skill untuk mahasiswa tingkat akhir dan fresh
+                graduate.
+              </p>
+              <div className="mt-6 rounded-3xl border border-cyan-300/20 bg-cyan-300/10 p-5">
+                <p className="text-sm font-bold leading-7 text-cyan-50">
+                  Kesimpulan: SkillMatch ID tidak perlu menjadi job portal
+                  terbesar. Keunggulan utamanya adalah menjadi platform paling
+                  relevan untuk early-career talent yang membutuhkan bukti
+                  skill, arahan karier, dan akses lowongan yang benar-benar
+                  sesuai.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.08] p-5">
+              <div className="absolute inset-6 rounded-[1.5rem] border border-white/10 bg-[linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:25%_25%]" />
+              <div className="absolute bottom-12 left-12 right-8 h-px bg-cyan-200/45" />
+              <div className="absolute bottom-12 left-12 top-8 w-px bg-cyan-200/45" />
+              <span className="absolute bottom-5 left-10 max-w-28 text-[10px] font-black uppercase tracking-[0.18em] text-slate-400">
+                General Job Portal
+              </span>
+              <span className="absolute bottom-5 right-5 max-w-32 text-right text-[10px] font-black uppercase tracking-[0.18em] text-emerald-200">
+                Skill-Based Recruitment
+              </span>
+              <span className="absolute left-4 top-8 max-w-28 text-[10px] font-black uppercase tracking-[0.18em] text-emerald-200">
+                High Personalization
+              </span>
+              <span className="absolute bottom-16 left-4 max-w-24 text-[10px] font-black uppercase tracking-[0.18em] text-slate-400">
+                Low Personalization
+              </span>
+
+              {positioningPoints.map((point) => (
+                <div
+                  className="absolute z-10 -translate-x-1/2 -translate-y-1/2"
+                  key={point.name}
+                  style={{ left: point.x, top: point.y }}
+                >
+                  <div
+                    className={`w-max max-w-[8.25rem] rounded-2xl border px-3 py-2 text-center shadow-lg ${
+                      point.featured
+                        ? "border-emerald-200 bg-emerald-300 text-slate-950 shadow-emerald-950/20"
+                        : "border-white/20 bg-slate-950/90 text-white"
+                    }`}
+                  >
+                    <p className="text-xs font-black">
+                      {point.name}
+                    </p>
+                    <p
+                      className={`mt-1 text-[10px] leading-4 ${
+                        point.featured ? "text-slate-700" : "text-slate-300"
+                      }`}
+                    >
+                      {point.note}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <NextSectionButton
+            href="#strategic-conclusion"
+            label="Strategic Conclusion"
+          />
+        </div>
+      </section>
+
+      <section
+        className="px-4 py-16 sm:px-8 md:py-20 lg:px-10"
+        id="strategic-conclusion"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="relative overflow-hidden rounded-[1.75rem] bg-slate-950 p-6 text-white shadow-[0_32px_100px_rgba(15,23,42,0.22)] sm:rounded-[2.25rem] sm:p-8 md:p-12">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(45,212,191,0.28),transparent_26%),radial-gradient(circle_at_84%_22%,rgba(52,211,153,0.22),transparent_24%)]" />
+            <div className="relative grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-300">
+                  06 Strategic Conclusion
+                </p>
+                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight md:text-5xl">
+                  Kesimpulan Strategis
+                </h2>
+              </div>
+              <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur">
+                <p className="text-pretty text-lg font-semibold leading-8 text-slate-100 md:text-xl">
+                  SkillMatch ID tidak perlu menjadi job portal terbesar. Fokus
+                  utamanya adalah menjadi platform rekrutmen berbasis skill yang
+                  paling relevan untuk mahasiswa tingkat akhir dan fresh
+                  graduate. Keunggulan SkillMatch ID terletak pada Verified
+                  Skill, Match Score, Auto Portfolio, Career Roadmap, dan HR
+                  Shortlist berbasis bukti kemampuan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <NextSectionButton href="#mvp-scope" label="MVP SkillMatch ID" />
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="mvp-scope">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="05 Competitive Advantage"
+            eyebrow="07 MVP Scope"
+            title="MVP SkillMatch ID"
+            text="Ruang lingkup MVP dipisahkan antara fitur yang harus membuktikan value awal dan fitur lanjutan untuk skala kemitraan."
+          />
+          <div className="grid gap-5 lg:grid-cols-2">
+            {mvpScope.map((scope, scopeIdx) => (
+              <article
+                className={`rounded-[2rem] border p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                  scopeIdx === 0
+                    ? "border-emerald-200 bg-white hover:shadow-emerald-100"
+                    : "border-slate-200 bg-slate-950 text-white hover:shadow-slate-300"
+                }`}
+                key={scope.title}
+              >
+                <div className="mb-6 flex items-center gap-3">
+                  <span
+                    className={`grid h-12 w-12 place-items-center rounded-2xl text-sm font-black ${
+                      scopeIdx === 0
+                        ? "bg-emerald-300 text-slate-950"
+                        : "bg-white text-slate-950"
+                    }`}
+                  >
+                    {scopeIdx + 1}
+                  </span>
+                  <h3 className="text-2xl font-semibold tracking-tight">
+                    {scope.title}
+                  </h3>
+                </div>
+                <div className="grid gap-3">
+                  {scope.items.map((item) => (
+                    <div
+                      className={`flex items-center gap-3 rounded-2xl p-4 text-sm font-semibold ${
+                        scopeIdx === 0
+                          ? "bg-slate-50 text-slate-700"
+                          : "bg-white/10 text-slate-100"
+                      }`}
+                      key={item}
+                    >
+                      <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-br from-cyan-300 to-emerald-300" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+          <NextSectionButton href="#go-to-market" label="Strategi Masuk Pasar" />
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="go-to-market">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="08 Go-To-Market"
+            title="Strategi Masuk Pasar"
+            text="Strategi awal dibuat campus-first agar akuisisi talent dan validasi HR berjalan dari ekosistem yang paling dekat dengan pengguna utama."
+          />
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {goToMarketSteps.map((item) => (
+              <article
+                className="group rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-xl hover:shadow-cyan-100"
+                key={item.title}
+              >
+                <div className="mb-8 inline-flex rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-emerald-300 transition group-hover:bg-cyan-700 group-hover:text-white">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-semibold tracking-tight text-slate-950">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  {item.text}
+                </p>
+              </article>
+            ))}
+          </div>
+          <NextSectionButton href="#success-metrics" label="Indikator Keberhasilan" />
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="success-metrics">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="09 Success Metrics"
+            title="Indikator Keberhasilan"
+            text="KPI awal menilai traction kandidat, bukti validasi skill, adopsi perusahaan, dan efisiensi screening HR."
+          />
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {successMetrics.map((metric) => (
+              <article
+                className="relative overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-100"
+                key={metric.label}
+              >
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-gradient-to-br from-cyan-100 to-emerald-100" />
+                <p className="relative text-4xl font-black tracking-tight text-slate-950">
+                  {metric.value}
+                </p>
+                <p className="relative mt-4 text-sm font-bold uppercase tracking-[0.14em] text-slate-500">
+                  {metric.label}
+                </p>
+              </article>
+            ))}
+          </div>
+          <NextSectionButton href="#before-after" label="Before vs After" />
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="before-after">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="10 Transformation"
+            title="Sebelum dan sesudah SkillMatch ID"
+            text="Slide ini memperlihatkan perubahan pengalaman untuk Dinda sebagai talent dan Bu Rina sebagai HR."
+          />
+          <div className="grid gap-5 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-sm font-black uppercase tracking-[0.24em] text-slate-500">
+                Before
+              </p>
+              <div className="mt-6 space-y-4">
+                {beforeAfter.map((item) => (
+                  <div
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm font-semibold leading-6 text-slate-700"
+                    key={item.before}
+                  >
+                    {item.before}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-[2rem] bg-slate-950 p-6 text-white shadow-[0_28px_90px_rgba(15,23,42,0.18)]">
+              <p className="text-sm font-black uppercase tracking-[0.24em] text-emerald-300">
+                After
+              </p>
+              <div className="mt-6 space-y-4">
+                {beforeAfter.map((item) => (
+                  <div
+                    className="rounded-2xl border border-white/10 bg-white/10 p-4 text-sm font-semibold leading-6 text-slate-100"
+                    key={item.after}
+                  >
+                    {item.after}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <NextSectionButton href="#competitive" label="Competitive Advantage" />
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="competitive">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeader
+            eyebrow="11 Competitive Advantage"
             title="Mengapa SkillMatch ID berbeda?"
             text="SkillMatch ID tidak berhenti di posting lowongan. Platform ini memberi bukti skill, Match Score, dan evidence yang bisa dipakai kandidat maupun HR."
           />
@@ -659,13 +1423,14 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <NextSectionButton href="#roadmap" label="Roadmap" />
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10" id="roadmap">
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="roadmap">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="06 Roadmap"
+            eyebrow="12 Roadmap"
             title="Roadmap menuju platform matching lulusan yang tervalidasi."
             text="Tahap pengembangan dimulai dari pilot kampus, assessment library, employer network, sampai skala nasional."
           />
@@ -688,27 +1453,90 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <NextSectionButton
+            href="#presentation-guide"
+            label="Alur Presentasi 3 Menit"
+          />
         </div>
       </section>
 
-      <section className="px-5 py-20 sm:px-8 lg:px-10">
+      <section
+        className="px-4 py-14 sm:px-8 md:py-16 lg:px-10"
+        id="presentation-guide"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-600">
+                  Speaker Notes
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                  Alur Presentasi 3 Menit
+                </h2>
+              </div>
+              <span className="w-fit rounded-full bg-emerald-50 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-emerald-700">
+                6 poin utama
+              </span>
+            </div>
+            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {presentationGuide.map((point, idx) => (
+                <article
+                  className="flex gap-4 rounded-3xl border border-slate-100 bg-slate-50 p-4 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white hover:shadow-lg hover:shadow-cyan-100"
+                  key={point}
+                >
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-emerald-300">
+                    {idx + 1}
+                  </span>
+                  <p className="text-sm font-semibold leading-6 text-slate-700">
+                    {point}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+          <NextSectionButton href="#closing" label="Closing" />
+        </div>
+      </section>
+
+      <section className="px-4 py-16 sm:px-8 md:py-20 lg:px-10" id="closing">
         <div className="mx-auto max-w-7xl">
           <div className="relative overflow-hidden rounded-[2rem] bg-slate-950 p-8 text-white shadow-2xl shadow-slate-950/20 md:p-12">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.25),transparent_28%),radial-gradient(circle_at_78%_12%,rgba(52,211,153,0.22),transparent_24%)]" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-300">
-                  07 Closing
+                  13 Closing
                 </p>
                 <h2 className="mt-4 max-w-3xl text-balance text-3xl font-semibold tracking-tight md:text-5xl">
-                  SkillMatch ID membantu potensi mahasiswa berubah menjadi
-                  bukti skill yang dipercaya perusahaan.
+                  SkillMatch ID hadir untuk mengubah proses rekrutmen dari
+                  sekadar melihat CV menjadi memahami kemampuan nyata kandidat.
                 </h2>
                 <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
                   Pilot bersama kampus, validasi bersama HR, dan bantu Dinda
                   serta ribuan fresh graduate lain membuka karier pertama
                   dengan confidence.
                 </p>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    className="rounded-full bg-emerald-300 px-6 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-emerald-950/20 transition hover:-translate-y-0.5 hover:bg-cyan-300"
+                    href="#prototype"
+                  >
+                    Lihat Prototype
+                  </a>
+                  <a
+                    className="rounded-full bg-white px-6 py-4 text-center text-sm font-black text-slate-950 shadow-xl shadow-slate-950/20 transition hover:-translate-y-0.5 hover:bg-emerald-100"
+                    href="#dashboard"
+                  >
+                    Coba HR Dashboard
+                  </a>
+                  <a
+                    className="rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center text-sm font-black text-white shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-white/15"
+                    href="mailto:hello@skillmatch.id"
+                  >
+                    Hubungi Tim SkillMatch ID
+                  </a>
+                </div>
               </div>
               <a
                 className="inline-flex justify-center rounded-full bg-white px-7 py-4 text-sm font-bold text-slate-950 shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-200"

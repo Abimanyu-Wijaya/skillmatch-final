@@ -9,6 +9,7 @@ const demoScreens = [
     eyebrow: "Launch",
     title: "SkillMatch ID",
     subtitle: "Match Your Skills, Unlock Your Career",
+    explanation: "Dinda masuk ke SkillMatch ID dan melihat value utama produk.",
   },
   {
     key: "onboarding",
@@ -16,6 +17,8 @@ const demoScreens = [
     eyebrow: "Intro",
     title: "Karier pertama yang lebih tepat",
     subtitle: "Analisis skill, validasi kemampuan, lalu temukan pekerjaan cocok.",
+    explanation:
+      "Dinda memahami alur dari analisis kemampuan sampai job matching.",
   },
   {
     key: "login",
@@ -23,6 +26,7 @@ const demoScreens = [
     eyebrow: "Access",
     title: "Masuk ke akun Dinda",
     subtitle: "Gunakan email kampus untuk mulai membangun portfolio.",
+    explanation: "Dinda masuk menggunakan akun kampus untuk membuat profil.",
   },
   {
     key: "assessment",
@@ -30,6 +34,7 @@ const demoScreens = [
     eyebrow: "Verified Skill",
     title: "Challenge UI/UX Designer",
     subtitle: "Selesaikan brief desain untuk memvalidasi skill.",
+    explanation: "Dinda memverifikasi skill desainnya lewat AI Skill Assessment.",
   },
   {
     key: "analysis",
@@ -37,6 +42,8 @@ const demoScreens = [
     eyebrow: "Result",
     title: "Match Score 88%",
     subtitle: "Dinda cocok untuk Junior UI/UX Designer.",
+    explanation:
+      "Dinda mendapat Match Score, Verified Skill, dan rekomendasi pengembangan.",
   },
   {
     key: "match",
@@ -44,6 +51,8 @@ const demoScreens = [
     eyebrow: "Matches",
     title: "Lowongan cocok",
     subtitle: "Diurutkan berdasarkan Match Score dan Verified Skill.",
+    explanation:
+      "Dinda melihat lowongan dengan Match Score tertinggi dan paling relevan.",
   },
   {
     key: "detail",
@@ -51,6 +60,8 @@ const demoScreens = [
     eyebrow: "Opening",
     title: "UI/UX Designer Intern",
     subtitle: "Jogja Digital Lab - Yogyakarta",
+    explanation:
+      "Dinda mengecek detail role, kebutuhan skill, dan bukti kecocokan.",
   },
   {
     key: "apply",
@@ -58,6 +69,8 @@ const demoScreens = [
     eyebrow: "Apply",
     title: "Kirim Auto Portfolio",
     subtitle: "Ringkasan match dan evidence dikirim ke Bu Rina.",
+    explanation:
+      "Dinda melamar menggunakan Verified Skill dan Auto Portfolio.",
   },
   {
     key: "tracking",
@@ -65,6 +78,7 @@ const demoScreens = [
     eyebrow: "Progress",
     title: "Lamaran diproses",
     subtitle: "Dinda memantau status lamaran secara jelas.",
+    explanation: "Dinda memantau status lamaran dari applied sampai interview.",
   },
   {
     key: "portfolio",
@@ -72,6 +86,8 @@ const demoScreens = [
     eyebrow: "Portfolio",
     title: "Dinda Prameswari",
     subtitle: "Mahasiswa akhir DKV - Yogyakarta",
+    explanation:
+      "Dinda memiliki Auto Portfolio profesional dari assessment dan proyek.",
   },
   {
     key: "roadmap",
@@ -79,6 +95,8 @@ const demoScreens = [
     eyebrow: "Roadmap",
     title: "Rencana 4 minggu",
     subtitle: "Fokus UX research, design system, dan case study.",
+    explanation:
+      "Dinda mendapat langkah pengembangan skill berikutnya lewat Career Roadmap.",
   },
 ];
 
@@ -100,9 +118,17 @@ export default function PrototypeDemo() {
   };
 
   return (
-    <div className="rounded-[2rem] border border-slate-200 bg-white/80 p-4 shadow-[0_28px_90px_rgba(15,23,42,0.12)] backdrop-blur-xl md:p-6">
-      <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-        <div className="mx-auto w-full max-w-[330px]">
+    <div className="w-full max-w-full overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white/80 p-3 shadow-[0_28px_90px_rgba(15,23,42,0.12)] backdrop-blur-xl sm:rounded-[2rem] sm:p-4 md:p-6">
+      <div className="grid min-w-0 gap-6 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+        <div className="mx-auto w-full max-w-[310px] sm:max-w-[330px]">
+          <div className="mb-4 flex min-h-11 items-center justify-between gap-2 rounded-full border border-slate-200 bg-white px-3 py-2 shadow-sm sm:px-4">
+            <span className="text-xs font-black uppercase tracking-[0.18em] text-cyan-700">
+              Step {active + 1} of {demoScreens.length}
+            </span>
+            <span className="text-right text-xs font-bold text-slate-500">
+              {screen.label}
+            </span>
+          </div>
           <IPhoneFrame screen={screen} />
         </div>
 
@@ -110,7 +136,7 @@ export default function PrototypeDemo() {
           <div className="mb-5 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">
             Interactive product demo
           </div>
-          <h3 className="text-balance text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+          <h3 className="text-balance text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
             Klik tab untuk mempresentasikan flow utama SkillMatch ID.
           </h3>
           <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
@@ -118,17 +144,25 @@ export default function PrototypeDemo() {
             Roadmap, lengkap dengan Verified Skill, Match Score, job cards,
             timeline lamaran, dan Auto Portfolio.
           </p>
+          <div className="mt-5 rounded-3xl border border-emerald-200 bg-emerald-50 p-4 sm:p-5">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-emerald-700">
+              Narasi screen aktif
+            </p>
+            <p className="mt-2 text-base font-semibold leading-7 text-slate-800">
+              {screen.explanation}
+            </p>
+          </div>
 
-          <div className="mt-7 flex gap-3">
+          <div className="mt-7 grid grid-cols-2 gap-3 sm:flex">
             <button
-              className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200"
+              className="min-h-11 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200"
               onClick={() => goTo(-1)}
               type="button"
             >
               Sebelumnya
             </button>
             <button
-              className="rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-cyan-700"
+              className="min-h-11 rounded-full bg-slate-950 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-cyan-700"
               onClick={() => goTo(1)}
               type="button"
             >
@@ -136,10 +170,10 @@ export default function PrototypeDemo() {
             </button>
           </div>
 
-          <div className="mt-7 grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="horizontal-scroll -mx-1 mt-7 flex gap-2 overflow-x-auto scroll-smooth px-1 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 xl:grid-cols-3">
             {demoScreens.map((item, index) => (
               <button
-                className={`rounded-2xl border px-4 py-3 text-left text-sm font-bold transition hover:-translate-y-0.5 ${
+                className={`min-h-11 min-w-[8.75rem] shrink-0 rounded-2xl border px-4 py-3 text-left text-sm font-bold transition hover:-translate-y-0.5 sm:min-w-0 ${
                   index === active
                     ? "border-slate-950 bg-slate-950 text-white shadow-lg shadow-slate-950/15"
                     : "border-slate-200 bg-white text-slate-700 hover:border-cyan-200"
@@ -163,16 +197,16 @@ export default function PrototypeDemo() {
 
 function IPhoneFrame({ screen }: { screen: (typeof demoScreens)[number] }) {
   return (
-    <div className="rounded-[2.5rem] border-[9px] border-slate-950 bg-slate-950 p-2 shadow-[0_40px_100px_rgba(2,6,23,0.35)]">
-      <div className="relative min-h-[640px] overflow-hidden rounded-[2rem] bg-slate-50">
-        <div className="absolute left-1/2 top-2 z-20 h-7 w-32 -translate-x-1/2 rounded-full bg-slate-950" />
-        <div className="flex min-h-[640px] flex-col bg-[linear-gradient(145deg,#f8fafc_0%,#ecfeff_46%,#f0fdf4_100%)]">
+    <div className="w-full max-w-full rounded-[2rem] border-[7px] border-slate-950 bg-slate-950 p-1.5 shadow-[0_40px_100px_rgba(2,6,23,0.35)] sm:rounded-[2.5rem] sm:border-[9px] sm:p-2">
+      <div className="relative min-h-[560px] overflow-hidden rounded-[1.6rem] bg-slate-50 sm:min-h-[640px] sm:rounded-[2rem]">
+        <div className="absolute left-1/2 top-2 z-20 h-6 w-24 -translate-x-1/2 rounded-full bg-slate-950 sm:h-7 sm:w-32" />
+        <div className="flex min-h-[560px] flex-col bg-[linear-gradient(145deg,#f8fafc_0%,#ecfeff_46%,#f0fdf4_100%)] sm:min-h-[640px]">
           <StatusBar />
-          <div className="flex items-center justify-between px-5 pt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-700">
+          <div className="flex items-center justify-between gap-3 px-4 pt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-cyan-700 sm:px-5 sm:tracking-[0.2em]">
             <span>{screen.eyebrow}</span>
             <span>SkillMatch</span>
           </div>
-          <div className="flex flex-1 flex-col px-5 pb-5 pt-5">
+          <div className="flex flex-1 flex-col px-4 pb-4 pt-4 sm:px-5 sm:pb-5 sm:pt-5">
             <ScreenContent screen={screen} />
             {["splash", "onboarding", "login"].includes(screen.key) ? null : (
               <BottomNav active={screen.key} />
@@ -186,7 +220,7 @@ function IPhoneFrame({ screen }: { screen: (typeof demoScreens)[number] }) {
 
 function StatusBar() {
   return (
-    <div className="flex items-center justify-between px-6 pb-3 pt-4 text-[10px] font-bold text-slate-700">
+    <div className="flex items-center justify-between px-5 pb-3 pt-4 text-[10px] font-bold text-slate-700 sm:px-6">
       <span>09:41</span>
       <div className="flex items-center gap-1">
         <span className="h-2 w-3 rounded-sm bg-slate-700" />
@@ -204,7 +238,7 @@ function ScreenContent({ screen }: { screen: (typeof demoScreens)[number] }) {
     return (
       <div className="flex flex-1 flex-col items-center justify-center text-center">
         <LogoMark size="large" />
-        <h4 className="mt-6 text-3xl font-black tracking-tight text-slate-950">
+        <h4 className="mt-6 text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
           {screen.title}
         </h4>
         <p className="mt-3 max-w-[220px] text-sm font-semibold leading-6 text-slate-600">
@@ -220,9 +254,9 @@ function ScreenContent({ screen }: { screen: (typeof demoScreens)[number] }) {
   if (screen.key === "onboarding") {
     return (
       <div className="flex flex-1 flex-col">
-        <div className="rounded-[1.5rem] bg-slate-950 p-5 text-white shadow-xl">
+        <div className="rounded-[1.5rem] bg-slate-950 p-4 text-white shadow-xl sm:p-5">
           <LogoMark />
-          <h4 className="mt-6 text-2xl font-black leading-tight">
+          <h4 className="mt-6 text-xl font-black leading-tight sm:text-2xl">
             {screen.title}
           </h4>
           <p className="mt-3 text-sm leading-6 text-slate-300">
@@ -301,8 +335,8 @@ function ScreenContent({ screen }: { screen: (typeof demoScreens)[number] }) {
       <div className="flex-1">
         <AppHeader title={screen.title} subtitle={screen.subtitle} />
         <div className="mt-5 grid place-items-center">
-          <div className="conic-ring grid h-40 w-40 place-items-center rounded-full">
-            <div className="grid h-30 w-30 place-items-center rounded-full bg-white">
+          <div className="conic-ring grid h-36 w-36 place-items-center rounded-full sm:h-40 sm:w-40">
+            <div className="grid h-28 w-28 place-items-center rounded-full bg-white sm:h-30 sm:w-30">
               <div className="text-center">
                 <p className="text-4xl font-black text-slate-950">88%</p>
                 <p className="text-xs font-bold text-slate-500">
@@ -391,7 +425,7 @@ function ScreenContent({ screen }: { screen: (typeof demoScreens)[number] }) {
       <div className="flex-1">
         <AppHeader title={screen.title} subtitle={screen.subtitle} />
         <PortfolioCard />
-        <div className="mt-4 grid grid-cols-2 gap-3">
+        <div className="mt-4 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2">
           <Metric value="6" label="Project" />
           <Metric value="4" label="Verified Badge" />
         </div>
